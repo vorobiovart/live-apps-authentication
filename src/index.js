@@ -7,11 +7,10 @@ import 'materialize-css/dist/css/materialize.min.css';
 import 'materialize-css/dist/js/materialize.min';
 import './index.css';
 
-console.log('wass here');
-window.renderClient = (containerId, history) => {
+window.renderAuth = (containerId, history) => {
     ReactDOM.render(<App history={history} />, document.getElementById(containerId));
 };
 
-window.unmountClient = containerId => {
+window.unmountAuth = containerId => {
     ReactDOM.unmountComponentAtNode(document.getElementById(containerId));
 };
