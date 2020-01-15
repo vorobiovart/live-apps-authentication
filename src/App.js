@@ -6,6 +6,8 @@ import Header from './components/Header';
 import Login from './screens/authentication/Login';
 import Register from './screens/authentication/Register';
 import LoginOrRegister from './screens/authentication/LoginOrRegister';
+import Dashboard from './screens/Dashboard';
+import Profile from './screens/Profile';
 
 const defaultHistory = createBrowserHistory();
 
@@ -25,6 +27,12 @@ const App = ({ history = defaultHistory }) => (
       </Route>
       <Route exact path="/">
         <LoginOrRegister />
+      </Route>
+      <Route exact path="/dashboard">
+        <Dashboard />
+      </Route>
+      <Route exact path="/profile">
+        <Profile />
       </Route>
     </Router>
   </StyledApp>
