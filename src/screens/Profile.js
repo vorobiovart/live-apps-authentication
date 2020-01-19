@@ -1,20 +1,23 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
+import Loading from '../components/Loading';
 
 const StyledProfile = styled.div`
   h3 {
     text-align: center;
   }
   .info {
+   text-align: center;
   } 
 `;
 
-const Profile = ({ history }) => {
+const Profile = ({ history, text }) => {
 	const [loading, setLoading] = useState(true);
 	const [userInfo, setUserInfo] = useState({});
+
 	useEffect(() => {
-		axios.get('/users/profile').then(({ data: user }) => {
+		axios.get('/user/profile').then(({ data: user }) => {
 			setUserInfo(user);
 			setLoading(false);
 		}).catch(reason => console.log(reason));
@@ -25,7 +28,7 @@ const Profile = ({ history }) => {
 			<div className="col s12 m8 l4 offset-m2 offset-l4">
 				<h3>Profile</h3>
 				{loading ? (
-					<h2>Loading..</h2>
+					<Loading />
 				) : (
 					<>
 						<div className="info">{userInfo.name}</div>

@@ -8,6 +8,7 @@ import Register from './screens/authentication/Register';
 import LoginOrRegister from './screens/authentication/LoginOrRegister';
 import Dashboard from './screens/Dashboard';
 import Profile from './screens/Profile';
+import AuthWrapper from './authCheck';
 
 const defaultHistory = createBrowserHistory();
 
@@ -29,10 +30,14 @@ const App = ({ history = defaultHistory }) => (
         <LoginOrRegister />
       </Route>
       <Route exact path="/dashboard">
-        <Dashboard />
+        <AuthWrapper>
+          <Dashboard />
+        </AuthWrapper>
       </Route>
       <Route exact path="/profile">
-        <Profile />
+        <AuthWrapper>
+          <Profile />
+        </AuthWrapper>
       </Route>
     </Router>
   </StyledApp>

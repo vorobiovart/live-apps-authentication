@@ -36,9 +36,9 @@ const LoginOrRegister = ({ history }) => (
         </button>
         <button
             className="btn-large waves-effect waves-dark"
-            onClick={() => history.push('test')}
+            onClick={() => history.push('dashboard')}
         >
-          Test
+          Dashboard
         </button>
       </div>
     </div>
