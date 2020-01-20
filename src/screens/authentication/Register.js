@@ -11,7 +11,7 @@ const StyledRegister = styled.form`
 // TODO: post actual JSON not form data
 // TODO: add validation
 const Register = () => (
-  <StyledRegister className="row" action="/user/register" method="POST">
+  <StyledRegister className="row" action="/api/user/register" method="POST">
     <div className="col s12 m8 l4 offset-m2 offset-l4">
       <div className="card">
         <div className="card-action teal lighten-1 white-text">

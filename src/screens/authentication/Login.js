@@ -12,7 +12,7 @@ const StyledLogin = styled.form`
 // TODO: post actual JSON not form data
 // TODO: add validation
 const Login = ({ history }) => (
-  <StyledLogin className="row" action="/user/login" method="POST">
+  <StyledLogin className="row" action="/api/user/login" method="POST">
     <div className="col s12 m8 l4 offset-m2 offset-l4">
       <div className="card">
         <div className="card-action teal lighten-1 white-text">

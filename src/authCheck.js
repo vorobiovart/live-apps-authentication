@@ -8,7 +8,7 @@ export const useAuthCheck = () => {
 	const [redirect, setRedirect] = useState(false);
 
 	useEffect(() => {
-		axios.get('/user/checkAuth').then(({ status }) => {
+		axios.get('/api/user/checkAuth').then(({ status }) => {
 			if (status !== 200) setRedirect(true);
 			setCheckingAuth(false)
 		}).catch(() => {

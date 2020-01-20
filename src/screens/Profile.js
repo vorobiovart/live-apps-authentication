@@ -17,7 +17,7 @@ const Profile = ({ history, text }) => {
 	const [userInfo, setUserInfo] = useState({});
 
 	useEffect(() => {
-		axios.get('/user/profile').then(({ data: user }) => {
+		axios.get('/api/user/profile').then(({ data: user }) => {
 			setUserInfo(user);
 			setLoading(false);
 		}).catch(reason => console.log(reason));
