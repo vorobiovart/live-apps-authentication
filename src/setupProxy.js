@@ -5,12 +5,4 @@ module.exports = app => {
         res.header('Access-Control-Allow-Origin', '*');
         next();
     });
-
-    app.use(
-      '/api/*',
-      proxy({
-          target: 'host.docker.internal:5000',
-          secure: false
-      })
-    );
 };
