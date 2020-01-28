@@ -16,3 +16,8 @@ services:
       - CHOKIDAR_USEPOLLING=true
     external_links:
       - server
+    networks:
+      - frontend
+networks:
+  frontend:
+    driver: bridge
