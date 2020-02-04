@@ -14,10 +14,8 @@ services:
     environment:
       - NODE_ENV=development
       - CHOKIDAR_USEPOLLING=true
-    external_links:
-      - server
     networks:
-      - frontend
+      - container_frontend
 networks:
-  frontend:
-    driver: bridge
+  container_frontend:
+    external: true
