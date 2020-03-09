@@ -4,20 +4,14 @@
   "private": true,
   "proxy": "http://server:5000",
   "dependencies": {
-    "axios": "^0.19.0",
-    "font-awesome": "^4.7.0",
-    "materialize-css": "^1.0.0",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-router-dom": "^5.1.2",
     "react-scripts": "3.2.0",
-    "styled-components": "^4.4.1",
+    "styled-components": "^5.0.1",
     "uuid": "^3.3.3"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
     "eject": "react-scripts eject",
     "lint": "eslint src",
     "inspectBundle": "node ./inspectBundle.js",
@@ -45,6 +39,7 @@
   "devDependencies": {
     "history": "^4.10.1",
     "progress-bar-webpack-plugin": "^2.1.0",
+    "react-app-rewired": "^2.1.5",
     "webpack-bundle-analyzer": "^3.6.0"
   }
 }
