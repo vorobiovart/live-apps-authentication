@@ -2,7 +2,7 @@
   "name": "@live-apps/authentication",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://server:5000",
+  "proxy": "http://localhost:5000",
   "dependencies": {
     "react-scripts": "^3.4.0",
     "styled-components": "^5.0.1",
